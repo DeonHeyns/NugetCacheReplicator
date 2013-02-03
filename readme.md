@@ -14,7 +14,7 @@ package over a slow connection.
 ##How
 Well it runs as a Windows Service using  [Topshelf](https://github.com/phatboyg/Topshelf), it creates
 a FileSystemWatcher that will watch the NuGet cached Directory. To get the application to run as a service 
-you will need to do the follow:
+you will need to do the following:
 
 1.) Download or clone the source
 
