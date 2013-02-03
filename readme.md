@@ -4,7 +4,7 @@ NuGet Cache Replicator
 
 ##What
 This is a Windows Service (NT Service) that will monitor a directory (NuGet Cache Directory).
-When a new NuGet package is installed that doesnt exist in this cache NuGet will it here,
+When a new NuGet package is installed that doesn't exist in this cache NuGet will copy it here,
 the replicator will pick it up and copy it over to your own local NuGet cache.
 
 ##Why
@@ -16,13 +16,20 @@ Well it runs as a Windows Service using  [Topshelf](https://github.com/phatboyg/
 a FileSystemWatcher that will watch the NuGet cached Directory. To get the application to run as a service 
 you will need to do the follow:
 
-1.) download or clone the source
+1.) Download or clone the source
+
 2.) Change the NugetCacheDirectory(this is the directory where NuGet stores the cached packages for your system) setting in the NugetCacheReplicatorService.exe.config and also change the TargetNugetRepositoryDirectory(this is the directory where you want your local cache to be) which is also in the NugetCacheReplicatorService.exe.config
+
 3.) XCopy the built Release files to C:\Program Files (x86)\Nuget Cache Replicator
+
 4.) Open up CMD as an Administrator
+
 5.) Enter the command NugetCacheReplicatorService.exe install
+
 6.) Enter the command NugetCacheReplicatorService.exe start
+
 7.) Add this new folder as a Package Source in Visual Studio under Tools -> Options -> Package Manager -> Package Sources.
+
 8.) Chill as your new local NuGet cache is populated with NuGet Packages as you install them via the Package Manager
 
 How to get hold of me
