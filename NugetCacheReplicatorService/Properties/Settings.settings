@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NugetCacheReplicatorService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TargetNugetRepositoryDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\NugetLocal</Value>
+    </Setting>
+    <Setting Name="NugetCacheDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\deonheyns\AppData\Local\NuGet\Cache</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
