@@ -2,7 +2,7 @@ NuGet Cache Replicator
 ======================
 #Replicate your NuGet cache to a local folder
 
-[![Build Status](http://hookify.cloudapp.net:8080/job/NuGet%20Cache%20Replicator/badge/icon)](/)
+[![Build Status](http://ci.deonheyns.com/job/NuGet%20Cache%20Replicator/badge/icon)](/)
 
 ##What
 This is a Windows Service (NT Service) that will monitor a directory (NuGet Cache Directory).
