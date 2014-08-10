@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Nugetcachereplicator by DeonHeyns</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Nugetcachereplicator</h1>
+        <p class="header">Helps manage a local cache of NuGet Packages</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/DeonHeyns/NugetCacheReplicator/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/DeonHeyns/NugetCacheReplicator/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/DeonHeyns/NugetCacheReplicator">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/DeonHeyns">DeonHeyns</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="nuget-cache-replicator" class="anchor" href="#nuget-cache-replicator"><span class="octicon octicon-link"></span></a>NuGet Cache Replicator</h1>
+
+<h1>
+<a name="replicate-your-nuget-cache-to-a-local-folder" class="anchor" href="#replicate-your-nuget-cache-to-a-local-folder"><span class="octicon octicon-link"></span></a>Replicate your NuGet cache to a local folder</h1>
+
+<p><a href="/"><img src="http://ci.deonheyns.com/job/NuGet%20Cache%20Replicator/badge/icon" alt="Build Status"></a></p>
+
+<h2>
+<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What</h2>
+
+<p>This is a Windows Service (NT Service) that will monitor a directory (NuGet Cache Directory).
+When a new NuGet package is installed that doesn't exist in this cache NuGet will copy it here,
+the replicator will pick it up and copy it over to your own local NuGet cache.</p>
+
+<h2>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why</h2>
+
+<p>I live in South Africa bandwidth is scarce and ain't nobody got time to wait on NuGet to download a 
+package over a slow connection.</p>
+
+<h2>
+<a name="how" class="anchor" href="#how"><span class="octicon octicon-link"></span></a>How</h2>
+
+<p>Well it runs as a Windows Service using  <a href="https://github.com/phatboyg/Topshelf">Topshelf</a>, it creates
+a FileSystemWatcher that will watch the NuGet cached Directory. To get the application to run as a service 
+you will need to do the following:</p>
+
+<p>1.) Download or clone the source</p>
+
+<p>2.) Change the NugetCacheDirectory(this is the directory where NuGet stores the cached packages for your system) setting in the NugetCacheReplicatorService.exe.config and also change the TargetNugetRepositoryDirectory(this is the directory where you want your local cache to be) which is also in the NugetCacheReplicatorService.exe.config</p>
+
+<p>3.) XCopy the built Release files to C:\Program Files (x86)\Nuget Cache Replicator</p>
+
+<p>4.) Open up CMD as an Administrator</p>
+
+<p>5.) Enter the command NugetCacheReplicatorService.exe install</p>
+
+<p>6.) Enter the command NugetCacheReplicatorService.exe start</p>
+
+<p>7.) Add this new folder as a Package Source in Visual Studio under Tools -&gt; Options -&gt; Package Manager -&gt; Package Sources.</p>
+
+<p>8.) Chill as your new local NuGet cache is populated with NuGet Packages as you install them via the Package Manager</p>
+
+<p>How to get hold of me
+twitter: <a href="https://twitter.com/deonheyns">@DeonHeyns</a></p>
+
+<p>website: <a href="http://deonheyns.com/contact">deonheyns.com</a></p>
+
+<p>GitHub: <a href="https://github.com/deonheyns">GitHub Profile</a></p>
+
+<h1>
+<a name="open-source-projects-used" class="anchor" href="#open-source-projects-used"><span class="octicon octicon-link"></span></a>Open source projects used:</h1>
+
+<p>Topshelf: <a href="https://github.com/phatboyg/Topshelf">https://github.com/phatboyg/Topshelf</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
